@@ -22,5 +22,6 @@ typedef NS_ENUM(NSInteger, INSRequestType) {
 extern NSString * const kINSClientID;
 extern NSString * const kINSBaseURL;
 extern NSString * const kINSClientIDKey;
+extern NSString * const kINSDataKey;
 
 @end

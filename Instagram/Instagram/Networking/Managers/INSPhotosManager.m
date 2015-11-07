@@ -9,6 +9,7 @@
 #import "INSNetworkManager.h"
 #import "INSPhotosManager.h"
 #import "INSRequest.h"
+#import "INSPhoto.h"
 
 //https://api.instagram.com/v1/media/popular?client_id=358150b5ca1a41c38b0a99a47e6557a4
 
@@ -33,11 +34,28 @@ static NSString * const kINSPopularItemsURL = @"media/popular";
 {
     INSRequest *popularPhotosRequest = [[INSRequest alloc] initWithRequestType:INSRequestTypeGet relativeURL:kINSPopularItemsURL];
     
+    popularPhotosRequest.additionalParameters[@"max_id"] = @"13872296";
+    
    return [self sendRequest:popularPhotosRequest completion:^(NSError *error, id data)
      {
          if (completion)
          {
-
+             if (error)
+             {
+                 completion(error, nil);
+             }
+             else
+             {
+                 NSArray *photosArray = [data arrayForKey:kINSDataKey];
+                 NSMutableArray *mutablePhotos = [NSMutableArray array];
+                 
+                 [photosArray enumerateObjectsUsingBlock:^(NSDictionary *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                     INSPhoto *photo = [[INSPhoto alloc] initWithDictionary:obj];
+                     [mutablePhotos addObject:photo];
+                 }];
+                 
+                 completion(nil, [mutablePhotos copy]);
+             }
          }
      }];
     

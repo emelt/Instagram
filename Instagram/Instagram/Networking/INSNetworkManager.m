@@ -44,9 +44,9 @@
                completion:(INSRequestCompletion)completion
 {
     NSMutableURLRequest *urlRequest = [self.networkingManager.requestSerializer requestWithMethod:[request requestTypeString]
-                                                                      URLString:[self fullURLForRequest:request]
-                                                                     parameters:request.additionalParameters
-                                                                          error:nil];
+                                                                                        URLString:[self fullURLForRequest:request]
+                                                                                       parameters:request.additionalParameters
+                                                                                            error:nil];
     if (!request)
     {
         if (completion)
@@ -57,6 +57,10 @@
         return nil;
     }
     
+    if (self.logsEnabled)
+    {
+        NSLog(@"\n--- INSNetwork \n Sending:\n %@ (%@) \n\nHeaders: %@\n\n", urlRequest.URL, urlRequest.HTTPMethod, [urlRequest allHTTPHeaderFields]);
+    }
     
     __block NSURLSessionDataTask * dataTask = [self.networkingManager dataTaskWithRequest:urlRequest completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         
