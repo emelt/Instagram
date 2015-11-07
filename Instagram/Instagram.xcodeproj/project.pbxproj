@@ -14,6 +14,8 @@
 		0FC3B7C11BEE44E1004B3D01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7BA1BEE44E1004B3D01 /* main.m */; };
 		0FC3B7C21BEE44E1004B3D01 /* INSTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7BE1BEE44E1004B3D01 /* INSTimelineViewController.m */; };
 		C8DF862C91787933D9CCC261 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF046293C81179B2AE959D1 /* libPods.a */; };
+		0FC3B7C51BEE5698004B3D01 /* INSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7C41BEE5698004B3D01 /* INSNetworkManager.m */; };
+		0FC3B7C91BEE5752004B3D01 /* INSDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7C81BEE5752004B3D01 /* INSDefines.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		4BF046293C81179B2AE959D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA5B5902140681E0496D603 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		97478492005496F394B5B888 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0FC3B7C31BEE5698004B3D01 /* INSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSNetworkManager.h; sourceTree = "<group>"; };
+		0FC3B7C41BEE5698004B3D01 /* INSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSNetworkManager.m; sourceTree = "<group>"; };
+		0FC3B7C71BEE5752004B3D01 /* INSDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSDefines.h; sourceTree = "<group>"; };
+		0FC3B7C81BEE5752004B3D01 /* INSDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSDefines.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,8 @@
 				0FC3B7AF1BEE44E1004B3D01 /* Cells */,
 				0FC3B7B01BEE44E1004B3D01 /* View Controllers */,
 				0FC3B7B11BEE44E1004B3D01 /* Views */,
+				0FC3B7C71BEE5752004B3D01 /* INSDefines.h */,
+				0FC3B7C81BEE5752004B3D01 /* INSDefines.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -187,6 +195,8 @@
 			children = (
 				0FC3B7B51BEE44E1004B3D01 /* Managers */,
 				0FC3B7B61BEE44E1004B3D01 /* Models */,
+				0FC3B7C31BEE5698004B3D01 /* INSNetworkManager.h */,
+				0FC3B7C41BEE5698004B3D01 /* INSNetworkManager.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -434,7 +444,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC3B7C91BEE5752004B3D01 /* INSDefines.m in Sources */,
 				0FC3B7C21BEE44E1004B3D01 /* INSTimelineViewController.m in Sources */,
+				0FC3B7C51BEE5698004B3D01 /* INSNetworkManager.m in Sources */,
 				0FC3B7C11BEE44E1004B3D01 /* main.m in Sources */,
 				0FC3B77F1BEE430D004B3D01 /* AppDelegate.m in Sources */,
 			);
