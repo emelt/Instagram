@@ -58,6 +58,8 @@
 		0FC3B7C41BEE5698004B3D01 /* INSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSNetworkManager.m; sourceTree = "<group>"; };
 		0FC3B7C71BEE5752004B3D01 /* INSDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSDefines.h; sourceTree = "<group>"; };
 		0FC3B7C81BEE5752004B3D01 /* INSDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSDefines.m; sourceTree = "<group>"; };
+		0FC3B7CA1BEE6C55004B3D01 /* INSPhotosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSPhotosManager.h; sourceTree = "<group>"; };
+		0FC3B7CB1BEE6C55004B3D01 /* INSPhotosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSPhotosManager.m; sourceTree = "<group>"; };
 		0FC3B7CD1BEE8D42004B3D01 /* Instagram_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instagram_PrefixHeader.pch; sourceTree = "<group>"; };
 		0FC3B7CE1BEE8FA5004B3D01 /* INSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSRequest.h; sourceTree = "<group>"; };
 		0FC3B7CF1BEE8FA5004B3D01 /* INSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSRequest.m; sourceTree = "<group>"; };
@@ -221,6 +223,8 @@
 		0FC3B7B51BEE44E1004B3D01 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0FC3B7CA1BEE6C55004B3D01 /* INSPhotosManager.h */,
+				0FC3B7CB1BEE6C55004B3D01 /* INSPhotosManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -469,6 +473,7 @@
 				0FC3B77F1BEE430D004B3D01 /* AppDelegate.m in Sources */,
 				0FC3B7D01BEE8FA5004B3D01 /* INSRequest.m in Sources */,
 				0FC3B7D31BEE923F004B3D01 /* NSString+INSAdditions.m in Sources */,
+				0FC3B7CC1BEE6C55004B3D01 /* INSPhotosManager.m in Sources */,
 				0FC3B7D61BEE93D2004B3D01 /* INSRequest+StringHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

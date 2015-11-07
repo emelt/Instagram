@@ -6,10 +6,6 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface INSTimelineViewController : UIViewController
 
-
 @end
-

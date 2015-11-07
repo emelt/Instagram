@@ -7,6 +7,7 @@
 //
 
 #import "INSTimelineViewController.h"
+#import "INSPhotosManager.h"
 
 @interface INSTimelineViewController ()
 
@@ -18,11 +19,11 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+#warning Test Code
+    [[INSPhotosManager sharedInstance] getPopularPhotosWithCompletion:^(NSError *error, NSArray *photos){
+        
+    }];
 }
 
 @end
