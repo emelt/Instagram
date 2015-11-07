@@ -6,7 +6,7 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class INSRequest;
 
 static NSString * const kINSNetworkingErrorDomain = @"com.instagram.networking.requestError";
 
@@ -30,13 +30,12 @@ typedef NS_ENUM(NSInteger, INSNetworkError)
 - (instancetype)initWithBaseURL:(NSURL *)url;
 
 /**
- Method that sends NSURLRequest with DELETE method to given URL and additonal parameters.
- @param URLString URL string that will be appended to base URL
- @param parameters Additional parameters that will be appended to URLString
- @param cancelOthers If you want this request to avoid duplicates, set to YES
- @return Unique request token in string
+ Method that converts given INSRequest to NSURLSessionRequest and sends it
+ @param request Request model that holds basic properties, like request type, relative url, additional parameters etc.
+ @param completion Completion block that'll be called at the end of execution
+ @return Unique request token in string (for cancellation etc. future references)
  */
-- (NSString *)sendRequest:(NSURLRequest *)request
+- (NSString *)sendRequest:(INSRequest *)request
                completion:(INSRequestCompletion)completion;
 
 @end

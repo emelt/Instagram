@@ -6,17 +6,21 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface INSDefines : NSObject
+
+typedef NS_ENUM(NSInteger, INSRequestType) {
+    INSRequestTypePut = 0,
+    INSRequestTypeGet,
+    INSRequestTypePost,
+    INSRequestTypeSet,
+    INSRequestTypePatch,
+    INSRequestTypeDelete
+};
 
 #pragma mark - String Constants
 
-extern NSString * const kRequestTypePOST;
-extern NSString * const kRequestTypeGET;
-extern NSString * const kRequestTypePUT;
-extern NSString * const kRequestTypeSET;
-extern NSString * const kRequestTypeDELETE;
-extern NSString * const kRequestTypePATCH;
+extern NSString * const kINSClientID;
+extern NSString * const kINSBaseURL;
+extern NSString * const kINSClientIDKey;
 
 @end

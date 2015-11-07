@@ -8,6 +8,8 @@
 
 #import "INSNetworkManager.h"
 #import "AFHTTPSessionManager.h"
+#import "INSRequest+StringHelpers.h"
+#import "NSString+INSAdditions.h"
 
 @interface INSNetworkManager()
 
@@ -38,9 +40,13 @@
 
 #pragma mark - Public Methods
 
-- (NSString *)sendRequest:(NSURLRequest *)request
-              completion:(INSRequestCompletion)completion
+- (NSString *)sendRequest:(INSRequest *)request
+               completion:(INSRequestCompletion)completion
 {
+    NSMutableURLRequest *urlRequest = [self.networkingManager.requestSerializer requestWithMethod:[request requestTypeString]
+                                                                      URLString:[self fullURLForRequest:request]
+                                                                     parameters:request.additionalParameters
+                                                                          error:nil];
     if (!request)
     {
         if (completion)
@@ -51,13 +57,8 @@
         return nil;
     }
     
-    if (self.logsEnabled)
-    {
-        NSString *postData = [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding];
-        NSLog(@"\n--- INS Network \n Sending:\n %@ (%@) \n\nHeaders: %@\n\nData: %@\n\n", request.URL, request.HTTPMethod, [request allHTTPHeaderFields], postData);
-    }
     
-    __block NSURLSessionDataTask * dataTask = [self.networkingManager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    __block NSURLSessionDataTask * dataTask = [self.networkingManager dataTaskWithRequest:urlRequest completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         
@@ -85,5 +86,20 @@
     
     return [NSString stringWithFormat:@"%li",(unsigned long)dataTask.taskIdentifier];
 }
+
+#pragma mark - Helpers
+
+- (NSString *)fullURLForRequest:(INSRequest *)request
+{
+    NSString *fullURL = self.baseURL.absoluteString;
+    
+    if (request.relativeURL)
+    {
+        fullURL = [NSString ins_urlPathWithComponents:@[fullURL, request.relativeURL]];
+    }
+    
+    return fullURL;
+}
+
 
 @end
