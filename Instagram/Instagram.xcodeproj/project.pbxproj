@@ -19,6 +19,11 @@
 		0FC3B7D01BEE8FA5004B3D01 /* INSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7CF1BEE8FA5004B3D01 /* INSRequest.m */; };
 		0FC3B7D31BEE923F004B3D01 /* NSString+INSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7D21BEE923F004B3D01 /* NSString+INSAdditions.m */; };
 		0FC3B7D61BEE93D2004B3D01 /* INSRequest+StringHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7D51BEE93D2004B3D01 /* INSRequest+StringHelpers.m */; };
+		0FC3B7D91BEEA0DF004B3D01 /* INSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7D81BEEA0DF004B3D01 /* INSPhoto.m */; };
+		0FC3B7DC1BEEA1F2004B3D01 /* INSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7DB1BEEA1F2004B3D01 /* INSUser.m */; };
+		0FC3B7E21BEEA241004B3D01 /* INSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7E11BEEA241004B3D01 /* INSModel.m */; };
+		0FC3B7E51BEEA5BF004B3D01 /* NSDictionary+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7E41BEEA5BF004B3D01 /* NSDictionary+Parsing.m */; };
+		0FC3B7E81BEEA8C6004B3D01 /* INSPhotoURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7E71BEEA8C6004B3D01 /* INSPhotoURL.m */; };
 		C8DF862C91787933D9CCC261 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF046293C81179B2AE959D1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,16 @@
 		0FC3B7D21BEE923F004B3D01 /* NSString+INSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+INSAdditions.m"; sourceTree = "<group>"; };
 		0FC3B7D41BEE93D2004B3D01 /* INSRequest+StringHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "INSRequest+StringHelpers.h"; sourceTree = "<group>"; };
 		0FC3B7D51BEE93D2004B3D01 /* INSRequest+StringHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "INSRequest+StringHelpers.m"; sourceTree = "<group>"; };
+		0FC3B7D71BEEA0DF004B3D01 /* INSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSPhoto.h; sourceTree = "<group>"; };
+		0FC3B7D81BEEA0DF004B3D01 /* INSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSPhoto.m; sourceTree = "<group>"; };
+		0FC3B7DA1BEEA1F2004B3D01 /* INSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSUser.h; sourceTree = "<group>"; };
+		0FC3B7DB1BEEA1F2004B3D01 /* INSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSUser.m; sourceTree = "<group>"; };
+		0FC3B7E01BEEA241004B3D01 /* INSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSModel.h; sourceTree = "<group>"; };
+		0FC3B7E11BEEA241004B3D01 /* INSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSModel.m; sourceTree = "<group>"; };
+		0FC3B7E31BEEA5BF004B3D01 /* NSDictionary+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Parsing.h"; sourceTree = "<group>"; };
+		0FC3B7E41BEEA5BF004B3D01 /* NSDictionary+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Parsing.m"; sourceTree = "<group>"; };
+		0FC3B7E61BEEA8C6004B3D01 /* INSPhotoURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSPhotoURL.h; sourceTree = "<group>"; };
+		0FC3B7E71BEEA8C6004B3D01 /* INSPhotoURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSPhotoURL.m; sourceTree = "<group>"; };
 		4BF046293C81179B2AE959D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA5B5902140681E0496D603 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		97478492005496F394B5B888 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +211,8 @@
 				0FC3B7D21BEE923F004B3D01 /* NSString+INSAdditions.m */,
 				0FC3B7D41BEE93D2004B3D01 /* INSRequest+StringHelpers.h */,
 				0FC3B7D51BEE93D2004B3D01 /* INSRequest+StringHelpers.m */,
+				0FC3B7E31BEEA5BF004B3D01 /* NSDictionary+Parsing.h */,
+				0FC3B7E41BEEA5BF004B3D01 /* NSDictionary+Parsing.m */,
 			);
 			path = Categrories;
 			sourceTree = "<group>";
@@ -232,6 +249,14 @@
 		0FC3B7B61BEE44E1004B3D01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0FC3B7D71BEEA0DF004B3D01 /* INSPhoto.h */,
+				0FC3B7D81BEEA0DF004B3D01 /* INSPhoto.m */,
+				0FC3B7DA1BEEA1F2004B3D01 /* INSUser.h */,
+				0FC3B7DB1BEEA1F2004B3D01 /* INSUser.m */,
+				0FC3B7E01BEEA241004B3D01 /* INSModel.h */,
+				0FC3B7E11BEEA241004B3D01 /* INSModel.m */,
+				0FC3B7E61BEEA8C6004B3D01 /* INSPhotoURL.h */,
+				0FC3B7E71BEEA8C6004B3D01 /* INSPhotoURL.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -466,13 +491,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC3B7E21BEEA241004B3D01 /* INSModel.m in Sources */,
 				0FC3B7C91BEE5752004B3D01 /* INSDefines.m in Sources */,
 				0FC3B7C21BEE44E1004B3D01 /* INSTimelineViewController.m in Sources */,
 				0FC3B7C51BEE5698004B3D01 /* INSNetworkManager.m in Sources */,
+				0FC3B7D91BEEA0DF004B3D01 /* INSPhoto.m in Sources */,
 				0FC3B7C11BEE44E1004B3D01 /* main.m in Sources */,
 				0FC3B77F1BEE430D004B3D01 /* AppDelegate.m in Sources */,
 				0FC3B7D01BEE8FA5004B3D01 /* INSRequest.m in Sources */,
+				0FC3B7DC1BEEA1F2004B3D01 /* INSUser.m in Sources */,
+				0FC3B7E81BEEA8C6004B3D01 /* INSPhotoURL.m in Sources */,
 				0FC3B7D31BEE923F004B3D01 /* NSString+INSAdditions.m in Sources */,
+				0FC3B7E51BEEA5BF004B3D01 /* NSDictionary+Parsing.m in Sources */,
 				0FC3B7CC1BEE6C55004B3D01 /* INSPhotosManager.m in Sources */,
 				0FC3B7D61BEE93D2004B3D01 /* INSRequest+StringHelpers.m in Sources */,
 			);

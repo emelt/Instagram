@@ -6,7 +6,9 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
-typedef void(^INSGetPhotosRequestCompletion)(NSError *error, NSArray *photos);
+@class INSPhoto;
+
+typedef void(^INSGetPhotosRequestCompletion)(NSError *error, NSArray<INSPhoto *> *photos);
 
 @interface INSPhotosManager : INSNetworkManager
 

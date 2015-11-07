@@ -13,6 +13,11 @@
 #import <UIKit/UIKit.h>
 
 #import "INSDefines.h"
+
+#import "NSDictionary+Parsing.h"
+#import "UIImageView+AFNetworking.h"
+
 #import "INSNetworkManager.h"
+#import "INSModel.h"
 
 #endif
