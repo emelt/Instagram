@@ -1,0 +1,18 @@
+//
+//  Instagram_PrefixHeader.pch
+//  Instagram
+//
+//  Created by Emel Topaloglu on 07/11/2015.
+//  Copyright © 2015 Emel Topaloglu. All rights reserved.
+//
+
+#ifndef Instagram_PrefixHeader_h
+#define Instagram_PrefixHeader_h
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "INSDefines.h"
+#import "INSNetworkManager.h"
+
+#endif

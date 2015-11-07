@@ -58,6 +58,7 @@
 		0FC3B7C41BEE5698004B3D01 /* INSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSNetworkManager.m; sourceTree = "<group>"; };
 		0FC3B7C71BEE5752004B3D01 /* INSDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSDefines.h; sourceTree = "<group>"; };
 		0FC3B7C81BEE5752004B3D01 /* INSDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSDefines.m; sourceTree = "<group>"; };
+		0FC3B7CD1BEE8D42004B3D01 /* Instagram_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instagram_PrefixHeader.pch; sourceTree = "<group>"; };
 		0FC3B7CE1BEE8FA5004B3D01 /* INSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSRequest.h; sourceTree = "<group>"; };
 		0FC3B7CF1BEE8FA5004B3D01 /* INSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSRequest.m; sourceTree = "<group>"; };
 		0FC3B7D11BEE923F004B3D01 /* NSString+INSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+INSAdditions.h"; sourceTree = "<group>"; };
@@ -243,6 +244,7 @@
 			children = (
 				0FC3B7B91BEE44E1004B3D01 /* Info.plist */,
 				0FC3B7BA1BEE44E1004B3D01 /* main.m */,
+				0FC3B7CD1BEE8D42004B3D01 /* Instagram_PrefixHeader.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -590,6 +592,8 @@
 			baseConfigurationReference = 97478492005496F394B5B888 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Instagram/Supporting Files/Instagram_PrefixHeader.pch";
 				INFOPLIST_FILE = "Instagram/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Topaloglu.Instagram;
@@ -602,6 +606,8 @@
 			baseConfigurationReference = 5FA5B5902140681E0496D603 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Instagram/Supporting Files/Instagram_PrefixHeader.pch";
 				INFOPLIST_FILE = "Instagram/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Topaloglu.Instagram;
