@@ -6,6 +6,6 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
-@interface INSTimelineViewController : UIViewController
+@interface INSTimelineViewController : UITableViewController
 
 @end
