@@ -27,6 +27,7 @@
 		0FC3B7EE1BEEB3BE004B3D01 /* INSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7ED1BEEB3BE004B3D01 /* INSTableViewCell.m */; };
 		0FC3B7F11BEEB564004B3D01 /* INSLoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7F01BEEB564004B3D01 /* INSLoadingCell.m */; };
 		0FC3B7F41BEEB5B7004B3D01 /* INSPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7F31BEEB5B7004B3D01 /* INSPhotoCell.m */; };
+		0FC3B7F71BEEC146004B3D01 /* INSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7F61BEEC146004B3D01 /* INSTableViewController.m */; };
 		C8DF862C91787933D9CCC261 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF046293C81179B2AE959D1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,9 @@
 		0FC3B7F01BEEB564004B3D01 /* INSLoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSLoadingCell.m; sourceTree = "<group>"; };
 		0FC3B7F21BEEB5B7004B3D01 /* INSPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSPhotoCell.h; sourceTree = "<group>"; };
 		0FC3B7F31BEEB5B7004B3D01 /* INSPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSPhotoCell.m; sourceTree = "<group>"; };
+		0FC3B7F51BEEC146004B3D01 /* INSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSTableViewController.h; sourceTree = "<group>"; };
+		0FC3B7F61BEEC146004B3D01 /* INSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSTableViewController.m; sourceTree = "<group>"; };
+		0FC3B7F81BEEC697004B3D01 /* INSModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INSModelCell.h; sourceTree = "<group>"; };
 		4BF046293C81179B2AE959D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA5B5902140681E0496D603 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		97478492005496F394B5B888 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 				0FC3B7F01BEEB564004B3D01 /* INSLoadingCell.m */,
 				0FC3B7F21BEEB5B7004B3D01 /* INSPhotoCell.h */,
 				0FC3B7F31BEEB5B7004B3D01 /* INSPhotoCell.m */,
+				0FC3B7F81BEEC697004B3D01 /* INSModelCell.h */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -208,6 +213,8 @@
 		0FC3B7B01BEE44E1004B3D01 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0FC3B7F51BEEC146004B3D01 /* INSTableViewController.h */,
+				0FC3B7F61BEEC146004B3D01 /* INSTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -508,6 +515,7 @@
 			files = (
 				0FC3B7F11BEEB564004B3D01 /* INSLoadingCell.m in Sources */,
 				0FC3B7E21BEEA241004B3D01 /* INSModel.m in Sources */,
+				0FC3B7F71BEEC146004B3D01 /* INSTableViewController.m in Sources */,
 				0FC3B7C91BEE5752004B3D01 /* INSDefines.m in Sources */,
 				0FC3B7F41BEEB5B7004B3D01 /* INSPhotoCell.m in Sources */,
 				0FC3B7C21BEE44E1004B3D01 /* INSTimelineViewController.m in Sources */,

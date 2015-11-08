@@ -17,9 +17,12 @@
 
 @implementation INSPhotoCell
 
-- (void)updateWithPhoto:(INSPhoto *)photo
+- (void)updateCellWithModel:(INSModel *)model
 {
-    self.photo = photo;
+    if ([model isKindOfClass:[INSPhoto class]])
+    {
+        self.photo = (INSPhoto *)model;
+    }
 }
 
 @end

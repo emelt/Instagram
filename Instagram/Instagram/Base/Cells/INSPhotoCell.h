@@ -10,8 +10,6 @@
 
 #import "INSTableViewCell.h"
 
-@interface INSPhotoCell : INSTableViewCell
-
-- (void)updateWithPhoto:(INSPhoto *)photo;
+@interface INSPhotoCell : INSTableViewCell <INSModelCell>
 
 @end
