@@ -122,17 +122,17 @@ static CGFloat kINSOwnerPhotoEdge = 40.0f;
     NSDate *current = [NSDate date];
     NSDateComponents *components = [calendar components:NSCalendarUnitHour|NSCalendarUnitDay|NSCalendarUnitMinute fromDate:self.photo.time toDate:current options:0];
     
-    if (components.day > 0)
+    if (components.day < 0)
     {
-        return [NSString stringWithFormat:NSLocalizedString(@"%dd", nil), components.day];
+        return [NSString stringWithFormat:NSLocalizedString(@"%dd", nil), components.day * -1];
     }
-    else if (components.hour > 0)
+    else if (components.hour < 0)
     {
-        return [NSString stringWithFormat:NSLocalizedString(@"%dh", nil), components.hour];
+        return [NSString stringWithFormat:NSLocalizedString(@"%dh", nil), components.hour * -1];
     }
-    else if (components.minute > 0)
+    else if (components.minute < 0)
     {
-        return [NSString stringWithFormat:NSLocalizedString(@"%dm", nil), components.minute];
+        return [NSString stringWithFormat:NSLocalizedString(@"%dm", nil), components.minute * -1];
     }
     
     return @"";

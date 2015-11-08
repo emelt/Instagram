@@ -19,6 +19,7 @@
 #import "UIView+Autolayout.h"
 
 #import "INSNetworkManager.h"
+#import "INSDateFormatter.h"
 #import "INSModel.h"
 
 #import "INSModelCell.h"

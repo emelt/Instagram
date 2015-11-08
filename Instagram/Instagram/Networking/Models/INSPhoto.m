@@ -37,7 +37,7 @@ static NSString * const kINSTimeKey = @"created_time";
         _caption = [[dictionary dictionaryForKey:kINSCaptionKey] stringForKey:kINSTextKey];
         _photoId = [dictionary stringForKey:kINSIdKey];
         
-        _time = [NSDate dateWithTimeIntervalSince1970:[dictionary doubleForKey:kINSTimeKey]];
+        _time = [[INSDateFormatter sharedFormatter] dateFromUTCTime:[dictionary doubleForKey:kINSTimeKey]];
         
         NSDictionary *imagesDictionary = [dictionary dictionaryForKey:kINSImagesKey];
         _lowResolution = [[INSPhotoURL alloc] initWithDictionary:[imagesDictionary dictionaryForKey:kINSLowResolutionKey]];
