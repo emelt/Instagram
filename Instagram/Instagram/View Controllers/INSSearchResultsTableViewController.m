@@ -21,29 +21,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor cyanColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.modelCellClass = [INSPhotoCell class];
     self.tableView.estimatedRowHeight = [UIScreen mainScreen].bounds.size.width;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Setters
 
 - (void)setSearchKeyword:(NSString *)searchKeyword
 {
-    if (!searchKeyword || searchKeyword.length == 0 || searchKeyword == _searchKeyword)
+    if (!searchKeyword || searchKeyword == _searchKeyword)
     {
         return;
     }
     
     _searchKeyword = searchKeyword;
+    self.nextMaxTagId = nil;
     
+    [self.items removeAllObjects];
     [self.tableView reloadData];
+    
+    [self setLoading:YES];
 }
 
 #pragma mark - INSTableViewController Methods
@@ -66,7 +65,6 @@
             }
         }];
     }
-
 }
 
 @end

@@ -26,6 +26,14 @@
     self.tableView.tableFooterView = [UIView new];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self.items removeAllObjects];
+    self.loadingCell.loading = YES;
+}
+
 #pragma mark - Setters & Getters
 
 - (NSMutableArray *)items
@@ -46,6 +54,16 @@
     }
     
     return _loadingCell;
+}
+
+- (void)setLoading:(BOOL)loading
+{
+    if (loading == self.loadingCell.loading)
+    {
+        return;
+    }
+    
+    self.loadingCell.loading = loading;
 }
 
 #pragma mark - UITableViewDataSource

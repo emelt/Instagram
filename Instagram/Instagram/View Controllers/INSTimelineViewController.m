@@ -90,10 +90,8 @@ static CGFloat kINSSearchDelayDuration = 1.0f;
         [self.searchTimer invalidate];
         self.searchTimer = nil;
     }
-    else
-    {
+
         self.searchTimer = [NSTimer scheduledTimerWithTimeInterval:kINSSearchDelayDuration target:self selector:@selector(updateSearchResults) userInfo:nil repeats:NO];
-    }
 }
 
 - (void)updateSearchResults

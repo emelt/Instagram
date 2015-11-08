@@ -14,4 +14,6 @@
 
 - (void)loadingDidFinishWithItems:(NSArray *)newItems moreAvailable:(BOOL)moreAvailable;
 
+- (void)setLoading:(BOOL)loading;
+
 @end
