@@ -16,6 +16,7 @@
 
 #import "NSDictionary+Parsing.h"
 #import "UIImageView+AFNetworking.h"
+#import "UIView+Autolayout.h"
 
 #import "INSNetworkManager.h"
 #import "INSModel.h"

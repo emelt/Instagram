@@ -99,7 +99,7 @@
     
     if (request.relativeURL)
     {
-        fullURL = [NSString ins_urlPathWithComponents:@[fullURL, request.relativeURL]];
+        fullURL = [NSString urlPathWithComponents:@[fullURL, request.relativeURL]];
     }
     
     return fullURL;

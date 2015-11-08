@@ -12,7 +12,7 @@ static NSString * const kINSSlashString = @"/";
 
 @implementation NSString (INSAdditions)
 
-+ (NSString *)ins_urlPathWithComponents:(NSArray *)array
++ (NSString *)urlPathWithComponents:(NSArray *)array
 {
     NSMutableString *resultString = [NSMutableString string];
     

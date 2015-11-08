@@ -14,6 +14,6 @@
  @param array Array of strings which will be used to creation of the path, if the item is not a string then it skips
  @return A valid url string
  */
-+ (NSString *)ins_urlPathWithComponents:(NSArray *)array;
++ (NSString *)urlPathWithComponents:(NSArray *)array;
 
 @end

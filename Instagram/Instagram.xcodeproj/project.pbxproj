@@ -28,6 +28,8 @@
 		0FC3B7F11BEEB564004B3D01 /* INSLoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7F01BEEB564004B3D01 /* INSLoadingCell.m */; };
 		0FC3B7F41BEEB5B7004B3D01 /* INSPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7F31BEEB5B7004B3D01 /* INSPhotoCell.m */; };
 		0FC3B7F71BEEC146004B3D01 /* INSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7F61BEEC146004B3D01 /* INSTableViewController.m */; };
+		0FC3B7FB1BEED4F0004B3D01 /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7FA1BEED4F0004B3D01 /* UIView+Autolayout.m */; };
+		0FC3B7FD1BEED8F7004B3D01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC3B7FC1BEED8F7004B3D01 /* LaunchScreen.xib */; };
 		C8DF862C91787933D9CCC261 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF046293C81179B2AE959D1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,9 @@
 		0FC3B7F51BEEC146004B3D01 /* INSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSTableViewController.h; sourceTree = "<group>"; };
 		0FC3B7F61BEEC146004B3D01 /* INSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSTableViewController.m; sourceTree = "<group>"; };
 		0FC3B7F81BEEC697004B3D01 /* INSModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INSModelCell.h; sourceTree = "<group>"; };
+		0FC3B7F91BEED4F0004B3D01 /* UIView+Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Autolayout.h"; sourceTree = "<group>"; };
+		0FC3B7FA1BEED4F0004B3D01 /* UIView+Autolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Autolayout.m"; sourceTree = "<group>"; };
+		0FC3B7FC1BEED8F7004B3D01 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4BF046293C81179B2AE959D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA5B5902140681E0496D603 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		97478492005496F394B5B888 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +240,8 @@
 				0FC3B7D51BEE93D2004B3D01 /* INSRequest+StringHelpers.m */,
 				0FC3B7E31BEEA5BF004B3D01 /* NSDictionary+Parsing.h */,
 				0FC3B7E41BEEA5BF004B3D01 /* NSDictionary+Parsing.m */,
+				0FC3B7F91BEED4F0004B3D01 /* UIView+Autolayout.h */,
+				0FC3B7FA1BEED4F0004B3D01 /* UIView+Autolayout.m */,
 			);
 			path = Categrories;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 				0FC3B7B91BEE44E1004B3D01 /* Info.plist */,
 				0FC3B7BA1BEE44E1004B3D01 /* main.m */,
 				0FC3B7CD1BEE8D42004B3D01 /* Instagram_PrefixHeader.pch */,
+				0FC3B7FC1BEED8F7004B3D01 /* LaunchScreen.xib */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -440,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC3B7FD1BEED8F7004B3D01 /* LaunchScreen.xib in Resources */,
 				0FC3B7BF1BEE44E1004B3D01 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +530,7 @@
 				0FC3B7C21BEE44E1004B3D01 /* INSTimelineViewController.m in Sources */,
 				0FC3B7C51BEE5698004B3D01 /* INSNetworkManager.m in Sources */,
 				0FC3B7D91BEEA0DF004B3D01 /* INSPhoto.m in Sources */,
+				0FC3B7FB1BEED4F0004B3D01 /* UIView+Autolayout.m in Sources */,
 				0FC3B7C11BEE44E1004B3D01 /* main.m in Sources */,
 				0FC3B77F1BEE430D004B3D01 /* AppDelegate.m in Sources */,
 				0FC3B7D01BEE8FA5004B3D01 /* INSRequest.m in Sources */,
