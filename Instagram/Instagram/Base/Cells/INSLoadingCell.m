@@ -8,6 +8,8 @@
 
 #import "INSLoadingCell.h"
 
+static CGFloat kINSLoadingCellHeight =  120.0f;
+
 @interface INSLoadingCell ()
 
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
@@ -27,13 +29,23 @@
 
 - (void)setUpSubviews
 {
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(20, 20, 10, 10)];
+    [self.contentView constraintHeight:kINSLoadingCellHeight];
     
+    self.activityIndicator = [[UIActivityIndicatorView alloc] init];
+    self.endOfDataLabel = [[UILabel alloc] init];
+
     [self addSubview:self.activityIndicator];
+    [self addSubview:self.endOfDataLabel];
     
-    self.endOfDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
+    [self.activityIndicator setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.activityIndicator constraintHorizontalAlignmentInSuperviewToCenter];
+    [self.activityIndicator constraintVerticalAlignmentInSuperviewToCenter];
+    
+    [self.endOfDataLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.endOfDataLabel constraintHorizontalAlignmentInSuperviewToCenter];
+    [self.endOfDataLabel constraintVerticalAlignmentInSuperviewToCenter];
     [self.endOfDataLabel setText:NSLocalizedString(@"End Of Contents", nil)];
-    
+
     [self addSubview:self.endOfDataLabel];
 }
 

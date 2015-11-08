@@ -21,6 +21,8 @@
 
 @property (assign, nonatomic) NSUInteger likeCount;
 
+@property (strong, nonatomic) NSDate *time;
+
 @property (strong, nonatomic) INSPhotoURL *lowResolution;
 
 @property (strong, nonatomic) INSPhotoURL *thumbnail;

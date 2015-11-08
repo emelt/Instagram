@@ -13,7 +13,7 @@ typedef NS_ENUM(NSUInteger, INSLayoutConstraintLocation) {
     INSLayoutConstraintLocationTop,
     INSLayoutConstraintLocationLeft,
     INSLayoutConstraintLocationBottom,
-    INSLayoutConstraintLocationRight
+    INSLayoutConstraintLocationRight,
 };
 
 #import <UIKit/UIKit.h>

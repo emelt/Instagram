@@ -9,7 +9,7 @@
 #import "INSPhotoCell.h"
 #import "INSPhoto.h"
 
-static CGFloat kINSOwnerPhotoEdge = 50.0f;
+static CGFloat kINSOwnerPhotoEdge = 40.0f;
 
 @interface INSPhotoCell ()
 
@@ -63,11 +63,12 @@ static CGFloat kINSOwnerPhotoEdge = 50.0f;
     
     [_ownerNameLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_ownerNameLabel constraintDistance:kINSDefaultMargin toView:_ownerPhoto at:INSLayoutConstraintLocationLeft];
-    [_ownerNameLabel constraintDistanceToSuperview:kINSDefaultMargin at:INSLayoutConstraintLocationTop];
+    [_ownerNameLabel constraintDistanceToSuperview:kINSDefaultMargin + kINSOwnerPhotoEdge/2  at:INSLayoutConstraintLocationTop];
     
     [_timeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [_timeLabel constraintDistance:kINSDefaultMargin toView:self.contentView at:INSLayoutConstraintLocationRight];
-    [_timeLabel constraintDistanceToSuperview:kINSDefaultMargin at:INSLayoutConstraintLocationTop];
+    [_timeLabel constraintDistanceToSuperview:kINSDefaultMargin at:INSLayoutConstraintLocationRight];
+    [_timeLabel constraintDistanceToSuperview:kINSDefaultMargin + kINSOwnerPhotoEdge/2 at:INSLayoutConstraintLocationTop];
+    _timeLabel.textAlignment = NSTextAlignmentRight;
     
     [_image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_image constraintDistanceToSuperview:0.0f at:INSLayoutConstraintLocationRight];
@@ -94,9 +95,33 @@ static CGFloat kINSOwnerPhotoEdge = 50.0f;
         
         self.imageHeightConstraint.constant = self.photo.lowResolution.height / self.photo.lowResolution.width * self.contentView.frame.size.width;
         self.ownerNameLabel.text = self.photo.owner.nickname;
-        
+        self.timeLabel.text = [self getTimeDifferenceForDate];
         self.likesAndCommentsLabel.text = [NSString stringWithFormat:@"%lu likes, %lu comments", self.photo.likeCount, (unsigned long)self.photo.commentCount];
     }
+}
+
+#pragma mark - Helpers
+
+- (NSString *)getTimeDifferenceForDate
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *current = [NSDate date];
+    NSDateComponents *components = [calendar components:NSCalendarUnitHour|NSCalendarUnitDay|NSCalendarUnitMinute fromDate:self.photo.time toDate:current options:0];
+    
+    if (components.day > 0)
+    {
+        return [NSString stringWithFormat:NSLocalizedString(@"%dd", nil), components.day];
+    }
+    else if (components.hour > 0)
+    {
+        return [NSString stringWithFormat:NSLocalizedString(@"%dh", nil), components.hour];
+    }
+    else if (components.minute > 0)
+    {
+        return [NSString stringWithFormat:NSLocalizedString(@"%dm", nil), components.minute];
+    }
+    
+    return @"";
 }
 
 @end

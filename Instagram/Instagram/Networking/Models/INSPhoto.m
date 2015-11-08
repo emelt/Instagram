@@ -21,6 +21,7 @@ static NSString * const kINSCommentsKey = @"comments";
 static NSString * const kINSCountKey = @"count";
 static NSString * const kINSIdKey = @"id";
 static NSString * const kINSImagesKey = @"images";
+static NSString * const kINSTimeKey = @"created_time";
 
 @implementation INSPhoto
 
@@ -35,6 +36,7 @@ static NSString * const kINSImagesKey = @"images";
         _owner = [[INSUser alloc] initWithDictionary:[dictionary dictionaryForKey:kINSUserKey]];
         _caption = [[dictionary dictionaryForKey:kINSCaptionKey] stringForKey:kINSTextKey];
         _photoId = [dictionary stringForKey:kINSIdKey];
+        _time = [NSDate dateWithTimeIntervalSince1970:[dictionary doubleForKey:kINSTimeKey]];
         
         NSDictionary *imagesDictionary = [dictionary dictionaryForKey:kINSImagesKey];
         _lowResolution = [[INSPhotoURL alloc] initWithDictionary:[imagesDictionary dictionaryForKey:kINSLowResolutionKey]];

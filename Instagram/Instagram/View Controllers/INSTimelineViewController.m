@@ -22,7 +22,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = NSLocalizedString(@"Available photos", nil);
+    self.title = NSLocalizedString(@"Popular", nil);
 
     self.modelCellClass = [INSPhotoCell class];
     self.tableView.estimatedRowHeight = [UIScreen mainScreen].bounds.size.width;
