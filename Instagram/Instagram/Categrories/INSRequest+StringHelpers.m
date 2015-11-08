@@ -17,8 +17,6 @@ NSString * const INSRequestTypesStringArray[] =
     [INSRequestTypeDelete] = @"DELETE",
 };
 
-static const CGFloat kINSRequestTypeCount = 6;
-
 @implementation INSRequest (RequestType)
 
 - (NSString *)requestTypeString

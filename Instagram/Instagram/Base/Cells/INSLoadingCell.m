@@ -50,6 +50,9 @@ static CGFloat kINSActivityIndicatorWidth =  20.0f;
     [self.endOfDataLabel constraintVerticalAlignmentInSuperviewToCenter];
     [self.endOfDataLabel setText:NSLocalizedString(@"End Of Contents", nil)];
     [self.endOfDataLabel setTextColor:InstaBlueColor];
+    [self.endOfDataLabel setFont:[UIFont systemFontOfSize:15.0f weight:UIFontWeightLight]];
+    
+    self.separatorInset = UIEdgeInsetsMake(0.0f, [UIScreen mainScreen].bounds.size.width, 0.0f, 0.0f);
 
     [self addSubview:self.endOfDataLabel];
     

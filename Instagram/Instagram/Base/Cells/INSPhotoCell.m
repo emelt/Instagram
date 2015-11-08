@@ -97,13 +97,21 @@ static CGFloat kINSOwnerPhotoEdge = 40.0f;
         self.photo = (INSPhoto *)model;
         
         [self.ownerPhoto setImageWithURL:[NSURL URLWithString:self.photo.owner.profilePhotoUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
-        [self.image setImageWithURL:[NSURL URLWithString:self.photo.lowResolution.url]];
+        [self.image setImageWithURL:[NSURL URLWithString:self.photo.lowResolution.url] placeholderImage:[UIImage imageNamed:@"placeholder"]];
         
         self.imageHeightConstraint.constant = self.photo.lowResolution.height / self.photo.lowResolution.width * self.contentView.frame.size.width;
         self.ownerNameLabel.text = self.photo.owner.nickname;
         self.timeLabel.text = [self getTimeDifferenceForDate];
-        self.likesAndCommentsLabel.text = [NSString stringWithFormat:@"❤ %lu \t\t 💬 %lu", self.photo.likeCount, (unsigned long)self.photo.commentCount];
+        self.likesAndCommentsLabel.text = [NSString stringWithFormat:NSLocalizedString(@"❤ %lu \t\t 💬 %lu", nil), self.photo.likeCount, (unsigned long)self.photo.commentCount];
     }
+}
+
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    
+    [self.ownerPhoto setImage:nil];
+    [self.image setImage:nil];
 }
 
 #pragma mark - Helpers
