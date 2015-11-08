@@ -20,4 +20,6 @@
 #import "INSNetworkManager.h"
 #import "INSModel.h"
 
+#import "INSModelCell.h"
+
 #endif

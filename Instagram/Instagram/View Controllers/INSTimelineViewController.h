@@ -6,6 +6,8 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
-@interface INSTimelineViewController : UITableViewController
+#import "INSTableViewController.h"
+
+@interface INSTimelineViewController : INSTableViewController
 
 @end
