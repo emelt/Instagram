@@ -6,8 +6,8 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
-@class INSPhotoURL;
-@class INSUser;
+#import "INSPhotoURL.h"
+#import "INSUser.h"
 
 @interface INSPhoto : INSModel
 

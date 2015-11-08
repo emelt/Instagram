@@ -17,4 +17,8 @@ NSString * const kINSBaseURL = @"https://api.instagram.com/v1/";
 NSString * const kINSClientIDKey = @"client_id";
 NSString * const kINSDataKey = @"data";
 
+#pragma mark - Numeric Constants
+
+const CGFloat kINSDefaultMargin = 12.0f;
+
 @end

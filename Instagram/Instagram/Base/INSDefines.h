@@ -24,4 +24,8 @@ extern NSString * const kINSBaseURL;
 extern NSString * const kINSClientIDKey;
 extern NSString * const kINSDataKey;
 
+#pragma mark - Numeric Constants
+
+extern const CGFloat kINSDefaultMargin;
+
 @end

@@ -25,6 +25,7 @@
     self.title = NSLocalizedString(@"Available photos", nil);
 
     self.modelCellClass = [INSPhotoCell class];
+    self.tableView.estimatedRowHeight = [UIScreen mainScreen].bounds.size.width;
 }
 
 #pragma mark - UITableViewDelegate
