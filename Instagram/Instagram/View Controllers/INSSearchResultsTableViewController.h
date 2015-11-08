@@ -10,6 +10,6 @@
 
 @interface INSSearchResultsTableViewController : INSTableViewController
 
-- (void)searchWithKeyword:(NSString *)keyword;
+@property (strong, nonatomic) NSString *searchKeyword;
 
 @end

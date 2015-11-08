@@ -18,7 +18,8 @@
 static NSString * const kINSPopularItemsURL = @"media/popular";
 static NSString * const kINSRecentMediaURL = @"media/recent";
 static NSString * const kINSTagsURL = @"tags";
-static NSString * const kINSNextMaxTagIDKey = @"max_tag_id";
+static NSString * const kINSNextMaxIDKey = @"next_max_id";
+static NSString * const kINSMaxTagIDKey = @"max_tag_id";
 static NSString * const kINSPaginationKey = @"pagination";
 static NSString * const kINSCountKey = @"count";
 
@@ -80,8 +81,7 @@ static NSString * const kINSCountKey = @"count";
     
     if (maxTagId)
     {
-        
-        photosRequest.additionalParameters[kINSNextMaxTagIDKey] = maxTagId;
+        photosRequest.additionalParameters[kINSMaxTagIDKey] = maxTagId;
     }
     
     return [self sendRequest:photosRequest completion:^(NSError *error, id data)
@@ -102,7 +102,7 @@ static NSString * const kINSCountKey = @"count";
                             [mutablePhotos addObject:photo];
                         }];
                         
-                        NSString *nextMaxTagId = [[data dictionaryForKey:kINSPaginationKey] stringForKey:kINSNextMaxTagIDKey];
+                        NSString *nextMaxTagId = [[data dictionaryForKey:kINSPaginationKey] stringForKey:kINSNextMaxIDKey];
                         completion(nil, [mutablePhotos copy], nextMaxTagId);
                     }
                 }

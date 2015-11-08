@@ -7,9 +7,12 @@
 //
 
 #import "INSSearchResultsTableViewController.h"
+#import "INSPhotosManager.h"
 #import "INSPhotoCell.h"
 
 @interface INSSearchResultsTableViewController ()
+
+@property (strong, nonatomic) NSString *nextMaxTagId;
 
 @end
 
@@ -29,11 +32,41 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark -
+#pragma mark - Setters
 
-- (void)searchWithKeyword:(NSString *)keyword
+- (void)setSearchKeyword:(NSString *)searchKeyword
 {
+    if (!searchKeyword || searchKeyword.length == 0 || searchKeyword == _searchKeyword)
+    {
+        return;
+    }
     
+    _searchKeyword = searchKeyword;
+    
+    [self.tableView reloadData];
+}
+
+#pragma mark - INSTableViewController Methods
+
+- (void)getNextGroupOfItems
+{
+    __weak typeof(self) weakSelf = self;
+    
+    if (self.searchKeyword.length > 0)
+    {
+        [[INSPhotosManager sharedInstance] getPhotosWithKeyword:self.searchKeyword maxTagId:self.nextMaxTagId completion:^(NSError *error, NSArray<INSPhoto *> *photos, NSString *nextMaxTagId) {
+            if (error)
+            {
+                //handle error
+            }
+            else
+            {
+                weakSelf.nextMaxTagId = nextMaxTagId;
+                [weakSelf loadingDidFinishWithItems:photos moreAvailable:nextMaxTagId.length > 0];
+            }
+        }];
+    }
+
 }
 
 @end

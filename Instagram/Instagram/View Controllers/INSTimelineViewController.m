@@ -38,7 +38,6 @@ static CGPoint kINSTableContentOffset = {0, 44};
     self.searchController.searchResultsUpdater = self;
     [self.searchController.searchBar sizeToFit];
     
-    self.resultsController.tableView.delegate = self;
     self.searchController.searchBar.delegate = self;
     self.searchController.delegate = self;
     
@@ -78,7 +77,7 @@ static CGPoint kINSTableContentOffset = {0, 44};
         }
         else
         {
-            [self loadingDidFinishWithItems:photos moreAvailable:NO];
+            [weakSelf loadingDidFinishWithItems:photos moreAvailable:NO];
         }
     }];
 }
@@ -100,14 +99,7 @@ static CGPoint kINSTableContentOffset = {0, 44};
 
 - (void)updateSearchResults
 {
-    // update the filtered array based on the search text
-    NSString *searchText = self.searchController.searchBar.text;
-    NSMutableArray *searchResults = [self.items mutableCopy];
-    
-    // hand over the filtered results to our search results table
-    INSSearchResultsTableViewController *tableController = (INSSearchResultsTableViewController *)self.searchController.searchResultsController;
-    tableController.items = [NSArray arrayWithObject:searchResults[2]];
-    [tableController.tableView reloadData];
+    self.resultsController.searchKeyword = self.searchController.searchBar.text;
 }
 
 @end
