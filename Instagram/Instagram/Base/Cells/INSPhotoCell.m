@@ -64,11 +64,15 @@ static CGFloat kINSOwnerPhotoEdge = 40.0f;
     [_ownerNameLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_ownerNameLabel constraintDistance:kINSDefaultMargin toView:_ownerPhoto at:INSLayoutConstraintLocationLeft];
     [_ownerNameLabel constraintDistanceToSuperview:kINSDefaultMargin + kINSOwnerPhotoEdge/2  at:INSLayoutConstraintLocationTop];
+    [_ownerNameLabel setTextColor:InstaBlueColor];
+    [_ownerNameLabel setFont:[UIFont systemFontOfSize:15.0f weight:UIFontWeightSemibold]];
     
     [_timeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_timeLabel constraintDistanceToSuperview:kINSDefaultMargin at:INSLayoutConstraintLocationRight];
     [_timeLabel constraintDistanceToSuperview:kINSDefaultMargin + kINSOwnerPhotoEdge/2 at:INSLayoutConstraintLocationTop];
-    _timeLabel.textAlignment = NSTextAlignmentRight;
+    [_timeLabel setTextAlignment: NSTextAlignmentRight];
+    [_timeLabel setTextColor:[UIColor lightGrayColor]];
+    [_timeLabel setFont:[UIFont systemFontOfSize:15.0f weight:UIFontWeightLight]];
     
     [_image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_image constraintDistanceToSuperview:0.0f at:INSLayoutConstraintLocationRight];
@@ -80,6 +84,8 @@ static CGFloat kINSOwnerPhotoEdge = 40.0f;
     [_likesAndCommentsLabel constraintDistance:kINSDefaultMargin toView:_image at:INSLayoutConstraintLocationTop];
     [_likesAndCommentsLabel constraintDistanceToSuperview:kINSDefaultMargin at:INSLayoutConstraintLocationBottom];
     [_likesAndCommentsLabel constraintHorizontalAlignmentInSuperviewToCenter];
+    [_likesAndCommentsLabel setTextColor:[UIColor lightGrayColor]];
+    [_likesAndCommentsLabel setFont:[UIFont systemFontOfSize:15.0f weight:UIFontWeightMedium]];
     
     self.clipsToBounds = YES;
 }
@@ -90,13 +96,13 @@ static CGFloat kINSOwnerPhotoEdge = 40.0f;
     {
         self.photo = (INSPhoto *)model;
         
-        [self.ownerPhoto setImageWithURL:[NSURL URLWithString:self.photo.owner.profilePhotoUrl]];
+        [self.ownerPhoto setImageWithURL:[NSURL URLWithString:self.photo.owner.profilePhotoUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
         [self.image setImageWithURL:[NSURL URLWithString:self.photo.lowResolution.url]];
         
         self.imageHeightConstraint.constant = self.photo.lowResolution.height / self.photo.lowResolution.width * self.contentView.frame.size.width;
         self.ownerNameLabel.text = self.photo.owner.nickname;
         self.timeLabel.text = [self getTimeDifferenceForDate];
-        self.likesAndCommentsLabel.text = [NSString stringWithFormat:@"%lu likes, %lu comments", self.photo.likeCount, (unsigned long)self.photo.commentCount];
+        self.likesAndCommentsLabel.text = [NSString stringWithFormat:@"❤ %lu \t\t 💬 %lu", self.photo.likeCount, (unsigned long)self.photo.commentCount];
     }
 }
 

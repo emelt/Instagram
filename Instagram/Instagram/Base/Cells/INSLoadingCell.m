@@ -9,6 +9,7 @@
 #import "INSLoadingCell.h"
 
 static CGFloat kINSLoadingCellHeight =  120.0f;
+static CGFloat kINSActivityIndicatorWidth =  20.0f;
 
 @interface INSLoadingCell ()
 
@@ -40,13 +41,20 @@ static CGFloat kINSLoadingCellHeight =  120.0f;
     [self.activityIndicator setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.activityIndicator constraintHorizontalAlignmentInSuperviewToCenter];
     [self.activityIndicator constraintVerticalAlignmentInSuperviewToCenter];
+    [self.activityIndicator constraintWidth:kINSActivityIndicatorWidth];
+    [self.activityIndicator constraintHeight:kINSActivityIndicatorWidth];
+    [self.activityIndicator setColor:InstaBlueColor];
     
     [self.endOfDataLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.endOfDataLabel constraintHorizontalAlignmentInSuperviewToCenter];
     [self.endOfDataLabel constraintVerticalAlignmentInSuperviewToCenter];
     [self.endOfDataLabel setText:NSLocalizedString(@"End Of Contents", nil)];
+    [self.endOfDataLabel setTextColor:InstaBlueColor];
 
     [self addSubview:self.endOfDataLabel];
+    
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
 - (void)setLoading:(BOOL)loading
@@ -59,6 +67,8 @@ static CGFloat kINSLoadingCellHeight =  120.0f;
     _loading = loading;
     self.activityIndicator.hidden = !loading;
     self.endOfDataLabel.hidden = loading;
+    
+    loading ? [self.activityIndicator startAnimating] : [self.activityIndicator stopAnimating];
 }
 
 @end

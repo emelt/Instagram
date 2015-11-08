@@ -13,7 +13,6 @@
 #import "INSPhoto.h"
 
 static CGFloat kINSSearchDelayDuration = 1.0f;
-static CGPoint kINSTableContentOffset = {0, 44};
 
 @interface INSTimelineViewController () <UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
@@ -73,7 +72,7 @@ static CGPoint kINSTableContentOffset = {0, 44};
     [[INSPhotosManager sharedInstance] getPopularPhotosWithCompletion:^(NSError *error, NSArray *photos){
         if (error)
         {
-            
+            //handle errors
         }
         else
         {
