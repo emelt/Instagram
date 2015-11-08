@@ -30,6 +30,7 @@ static CGFloat kINSActivityIndicatorWidth =  20.0f;
 
 - (void)setUpSubviews
 {
+    [self.contentView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView constraintHeight:kINSLoadingCellHeight];
     
     self.activityIndicator = [[UIActivityIndicatorView alloc] init];
@@ -53,8 +54,7 @@ static CGFloat kINSActivityIndicatorWidth =  20.0f;
     [self.endOfDataLabel setFont:[UIFont systemFontOfSize:15.0f weight:UIFontWeightLight]];
     
     self.separatorInset = UIEdgeInsetsMake(0.0f, [UIScreen mainScreen].bounds.size.width, 0.0f, 0.0f);
-
-    [self addSubview:self.endOfDataLabel];
+    self.clipsToBounds = YES;
     
     [self setNeedsLayout];
     [self layoutIfNeeded];

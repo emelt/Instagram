@@ -19,7 +19,7 @@
     
     if (self)
     {
-        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return self;

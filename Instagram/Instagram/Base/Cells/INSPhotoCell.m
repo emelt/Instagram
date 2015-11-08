@@ -82,12 +82,11 @@ static CGFloat kINSOwnerPhotoEdge = 40.0f;
     
     [_likesAndCommentsLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_likesAndCommentsLabel constraintDistance:kINSDefaultMargin toView:_image at:INSLayoutConstraintLocationTop];
-    [_likesAndCommentsLabel constraintDistanceToSuperview:kINSDefaultMargin at:INSLayoutConstraintLocationBottom];
+    [_likesAndCommentsLabel constraintDistanceToSuperview:kINSDefaultMargin at:INSLayoutConstraintLocationBottom relation:NSLayoutRelationLessThanOrEqual];
     [_likesAndCommentsLabel constraintHorizontalAlignmentInSuperviewToCenter];
     [_likesAndCommentsLabel setTextColor:[UIColor lightGrayColor]];
     [_likesAndCommentsLabel setFont:[UIFont systemFontOfSize:15.0f weight:UIFontWeightMedium]];
     
-    self.clipsToBounds = YES;
 }
 
 - (void)updateCellWithModel:(INSModel *)model
