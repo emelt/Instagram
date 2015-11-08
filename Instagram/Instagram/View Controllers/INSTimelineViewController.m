@@ -72,7 +72,7 @@ static CGFloat kINSSearchDelayDuration = 1.0f;
     [[INSPhotosManager sharedInstance] getPopularPhotosWithCompletion:^(NSError *error, NSArray *photos){
         if (error)
         {
-            //handle errors
+            [weakSelf showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
         }
         else
         {

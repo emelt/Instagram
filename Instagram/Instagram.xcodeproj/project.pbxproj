@@ -32,6 +32,7 @@
 		0FC3B7FD1BEED8F7004B3D01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC3B7FC1BEED8F7004B3D01 /* LaunchScreen.xib */; };
 		0FC3B8001BEFC7C3004B3D01 /* INSSearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B7FF1BEFC7C3004B3D01 /* INSSearchResultsTableViewController.m */; };
 		0FC3B8061BEFF9B6004B3D01 /* INSDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B8051BEFF9B6004B3D01 /* INSDateFormatter.m */; };
+		0FC3B8091BEFF9B6004B3D01 /* UIViewController+UIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3B8081BEFF9B6004B3D01 /* UIViewController+UIAlertView.m */; };
 		C8DF862C91787933D9CCC261 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF046293C81179B2AE959D1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,8 @@
 		0FC3B7FF1BEFC7C3004B3D01 /* INSSearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSSearchResultsTableViewController.m; sourceTree = "<group>"; };
 		0FC3B8041BEFF9B6004B3D01 /* INSDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSDateFormatter.h; sourceTree = "<group>"; };
 		0FC3B8051BEFF9B6004B3D01 /* INSDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSDateFormatter.m; sourceTree = "<group>"; };
+		0FC3B8071BEFF9B6004B3D01 /* UIViewController+UIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UIAlertView.h"; sourceTree = "<group>"; };
+		0FC3B8081BEFF9B6004B3D01 /* UIViewController+UIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UIAlertView.m"; sourceTree = "<group>"; };
 		4BF046293C81179B2AE959D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA5B5902140681E0496D603 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		97478492005496F394B5B888 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				0FC3B7E41BEEA5BF004B3D01 /* NSDictionary+Parsing.m */,
 				0FC3B7F91BEED4F0004B3D01 /* UIView+Autolayout.h */,
 				0FC3B7FA1BEED4F0004B3D01 /* UIView+Autolayout.m */,
+				0FC3B8071BEFF9B6004B3D01 /* UIViewController+UIAlertView.h */,
+				0FC3B8081BEFF9B6004B3D01 /* UIViewController+UIAlertView.m */,
 			);
 			path = Categrories;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 				0FC3B8061BEFF9B6004B3D01 /* INSDateFormatter.m in Sources */,
 				0FC3B77F1BEE430D004B3D01 /* AppDelegate.m in Sources */,
 				0FC3B7D01BEE8FA5004B3D01 /* INSRequest.m in Sources */,
+				0FC3B8091BEFF9B6004B3D01 /* UIViewController+UIAlertView.m in Sources */,
 				0FC3B7DC1BEEA1F2004B3D01 /* INSUser.m in Sources */,
 				0FC3B7EE1BEEB3BE004B3D01 /* INSTableViewCell.m in Sources */,
 				0FC3B7E81BEEA8C6004B3D01 /* INSPhotoURL.m in Sources */,

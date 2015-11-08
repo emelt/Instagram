@@ -54,9 +54,10 @@
     if (self.searchKeyword.length > 0)
     {
         [[INSPhotosManager sharedInstance] getPhotosWithKeyword:self.searchKeyword maxTagId:self.nextMaxTagId completion:^(NSError *error, NSArray<INSPhoto *> *photos, NSString *nextMaxTagId) {
+            
             if (error)
             {
-                //handle error
+                [weakSelf showAlertWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription];
             }
             else
             {
