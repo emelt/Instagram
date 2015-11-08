@@ -6,26 +6,49 @@
 //  Copyright © 2015 Emel Topaloglu. All rights reserved.
 //
 
+#import "INSSearchResultsTableViewController.h"
 #import "INSTimelineViewController.h"
 #import "INSPhotosManager.h"
 #import "INSPhotoCell.h"
 #import "INSPhoto.h"
 
-@interface INSTimelineViewController ()
+static CGFloat kINSSearchDelayDuration = 1.0f;
+static CGPoint kINSTableContentOffset = {0, 44};
+
+@interface INSTimelineViewController () <UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
+
+@property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) INSSearchResultsTableViewController *resultsController;
+@property (strong, nonatomic) NSTimer *searchTimer;
 
 @end
 
 @implementation INSTimelineViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.title = NSLocalizedString(@"Popular", nil);
 
+    self.resultsController = [[INSSearchResultsTableViewController alloc] init];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsController];
+    self.searchController.searchResultsUpdater = self;
+    [self.searchController.searchBar sizeToFit];
+    
+    self.resultsController.tableView.delegate = self;
+    self.searchController.searchBar.delegate = self;
+    self.searchController.delegate = self;
+    
+    self.definesPresentationContext = YES;
+    
     self.modelCellClass = [INSPhotoCell class];
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
     self.tableView.estimatedRowHeight = [UIScreen mainScreen].bounds.size.width;
+    
 }
 
 #pragma mark - UITableViewDelegate
@@ -58,6 +81,33 @@
             [self loadingDidFinishWithItems:photos moreAvailable:NO];
         }
     }];
+}
+
+#pragma mark - UISearchResultsUpdating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
+    if (self.searchTimer)
+    {
+        [self.searchTimer invalidate];
+        self.searchTimer = nil;
+    }
+    else
+    {
+        self.searchTimer = [NSTimer scheduledTimerWithTimeInterval:kINSSearchDelayDuration target:self selector:@selector(updateSearchResults) userInfo:nil repeats:NO];
+    }
+}
+
+- (void)updateSearchResults
+{
+    // update the filtered array based on the search text
+    NSString *searchText = self.searchController.searchBar.text;
+    NSMutableArray *searchResults = [self.items mutableCopy];
+    
+    // hand over the filtered results to our search results table
+    INSSearchResultsTableViewController *tableController = (INSSearchResultsTableViewController *)self.searchController.searchResultsController;
+    tableController.items = [NSArray arrayWithObject:searchResults[2]];
+    [tableController.tableView reloadData];
 }
 
 @end
